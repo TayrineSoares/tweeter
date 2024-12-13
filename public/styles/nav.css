@@ -1,4 +1,7 @@
  nav {
+  position: fixed; /* to keep it at the top of the page. */ 
+  z-index: 1000; 
+  top: 0; /* makes sure the nav bar stays at the very top of the viewport.*/ 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,6 +27,7 @@
   flex-direction: column;
   align-items: center;
   color: #FFFFFF;
+  padding: 0 1.5em;
 
  }
 
