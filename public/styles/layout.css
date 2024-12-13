@@ -23,6 +23,16 @@ body {
   padding-top: 120px;
 }
 
+main {
+  width: 90%;
+  margin: 0 auto; /* centers the element horizontally */
+  background-color: cornsilk;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
