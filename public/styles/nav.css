@@ -1,0 +1,16 @@
+ nav {
+  display: flex;
+  align-items: flex-end;
+
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  padding: 0 1.5em 0 1.5em;
+
+ }
+
+ nav span {
+  font-family: 'Bungee';
+  color: #FFFFFF;
+
+ }
