@@ -10,8 +10,11 @@
 
  }
 
- .nav-tweeter-brand {
+ nav span {
   font-family: 'Bungee';
+}
+
+ .nav-tweeter-brand {
   color: #FFFFFF;
  }
 
