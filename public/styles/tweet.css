@@ -15,14 +15,29 @@
 
 .tweet header {
   display: flex;
-  flex-direction: row;
+  align-items:flex-start;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
 }
 
-#username {
+.user-info {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+
+.user-info img {
+  width: 60px; /* Adjust the width to your desired size */
+
+  object-fit: cover; /* Ensures the image fits well inside the container */
+  border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+.username {
+  display: flex;
+  align-items: flex-end;
   color: rgba(165, 165, 165, 0.973)
+
 }
 
 .tweet-body {
@@ -42,7 +57,7 @@
   font-size: 15px;
 }
 
-.icons {
+.tweet-icons {
   color:#4056A1;
   width:80px;
   display: flex;
@@ -50,6 +65,6 @@
   justify-content: space-between;
 }
 
-.icons i:hover {     /* Change color of each icon on hover */
-  color: rgba(255, 149, 0, 0.612);
+.tweet-icons i:hover {     /* Change color of each icon on hover */
+  color: rgba(186, 111, 5, 0.612);
 }

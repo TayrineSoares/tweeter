@@ -46,7 +46,7 @@
     <!-- Header -->
     <header class="main-header">
       <div class="avatar">
-        <img src="/images/profile-hex.png">
+        <img src="/images/profile-hex.png" alt="Profile picture">
       </div>
       <br>
       <div class="name">
@@ -71,8 +71,11 @@
 
       <article class="tweet">
         <header>
-          <p>Username</p>
-          <p id="username">@username</p>
+          <div class="user-info">
+            <img src="/images/default-user.png" class="tweet-user-picture" alt="Default User Picture">
+            <p>Username</p>
+          </div>
+          <p class="username">@username</p>
         </header>
 
       
@@ -82,7 +85,7 @@
 
         <footer>
           <p>Date</p>
-          <div class="icons">
+          <div class="tweet-icons">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
             <i class="fa-solid fa-heart"></i>
