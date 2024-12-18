@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,7 +44,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header class="main-header">
       <div class="avatar">
         <img src="/images/profile-hex.png">
       </div>
@@ -56,8 +57,8 @@
 
     <!-- Page-specific (main) content here -->
 
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+    <section class="main">
+      <!-- <h2>Compose Tweet</h2> -->
 
       <form class="tweet-form" action="/tweets" method="POST"> 
         <label for="tweet-text"> What are you humming about?</label>
@@ -66,8 +67,30 @@
           <button type="submit" id="tweet-button">Tweet</button>
           <output name="counter" id="counter" for="tweet-text">140</output>
         </div>
-  
       </form>
+
+      <article class="tweet">
+        <header>
+          <p>Username</p>
+          <p id="username">@username</p>
+        </header>
+
+      
+        <div class="tweet-body">
+        <p>This is my random tweet</p>
+        </div>
+
+        <footer>
+          <p>Date</p>
+          <div class="icons">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+        </footer>
+      </article>
+
     </section>
 
 
