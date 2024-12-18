@@ -28,7 +28,12 @@
   color: white;
 }
 
+.submit-button:hover {
+  background-color: #334C8C; /* Darker shade of the background color on hover */
+}
+
 
 #tweet_text {
   resize: none;
+  padding: 20px;
 }
