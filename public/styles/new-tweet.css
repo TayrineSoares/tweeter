@@ -29,11 +29,17 @@
 }
 
 .submit-button:hover {
-  background-color: #334C8C; /* Darker shade of the background color on hover */
+  background-color: #263a6a; /* Darker shade of the background color on hover */
 }
 
 
-#tweet_text {
+#tweet-text {
   resize: none;
   padding: 20px;
+  height: 70px;
+  background-color: transparent;  /* Makes the background invisible */
+  border: none;
+  border-bottom: 3px solid black;        
+  color: #333;                    /* Text color for visibility */
+  font-size: 16px;                 /* Font size */
 }
