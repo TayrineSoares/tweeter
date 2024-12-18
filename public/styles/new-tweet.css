@@ -23,23 +23,26 @@
   font-family: 'Bungee';
 }
 
-.submit-button {
+#tweet-button {
   background-color: #4056A1;
   color: white;
 }
 
-.submit-button:hover {
-  background-color: #263a6a; /* Darker shade of the background color on hover */
+#tweet-button:hover {
+  background-color: #263a6a; /* Darker shade on hover */
 }
 
 
 #tweet-text {
   resize: none;
-  padding: 20px;
-  height: 70px;
   background-color: transparent;  /* Makes the background invisible */
   border: none;
+  outline: none;
   border-bottom: 3px solid black;        
   color: #333;                    /* Text color for visibility */
   font-size: 16px;                 /* Font size */
+}
+
+.negative {                      /* counter becomes red when < 0 */
+  color: red;
 }
