@@ -10,6 +10,19 @@ $(document).ready(function() {
   $('.tweet-form').on('submit', function(event) {
     // Prevent the default behavior
     event.preventDefault();
+
+    // Serialize the form data
+    const serializedData = $(this).serialize();
+
+    // Send the serialized data to the server
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:8080/tweets',
+      data: serializedData,
+      success: function(response) {
+        console.log('Tweet submitted successfully:', response);
+      }
+    });
   });
 
     // Fake data taken from initial-tweets.json
