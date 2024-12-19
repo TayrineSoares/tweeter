@@ -6,6 +6,12 @@
 
 $(document).ready(function() {
 
+  // add an event listener to the form submission and prevent reloading the page
+  $('.tweet-form').on('submit', function(event) {
+    // Prevent the default behavior
+    event.preventDefault();
+  });
+
     // Fake data taken from initial-tweets.json
   const data = [
     {
@@ -69,8 +75,6 @@ function createTweetElement(tweetData) {
 
 // takes in an array of tweet objects and then appends each one to the #tweets-container
 const renderTweets = function(tweets) {
-  // Empty the container to avoid duplicate tweets when rendering
-  $('#tweets-container').empty();
 
   // Loop through each tweet object in the array
   for (const tweet of tweets) {
@@ -83,5 +87,7 @@ const renderTweets = function(tweets) {
 };
 
 renderTweets(data);
+
+
 
 });
