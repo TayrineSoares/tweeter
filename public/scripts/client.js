@@ -45,10 +45,10 @@ $(document).ready(function() {
       success: function (response) {
         
         console.log('Tweet submitted successfully:', response);
-        
-        // After the tweet is successfully submitted, append it to the page
-        const newTweet = createTweetElement(response);  // Assuming 'response' contains the new tweet data
-        $('#tweets-container').prepend(newTweet);  // Add the new tweet to the top of the list
+        // Clear the tweet container
+         $('#tweets-container').empty();
+        // Fetch the tweets again
+        loadTweets();
       }
     });
   });
