@@ -5,7 +5,23 @@
  */
 
 $(document).ready(function() {
+  
+  const maxTweetLength = 140;
 
+  // Validation function
+  const isTweetValid = function (tweetText) {
+    if (!tweetText || tweetText.trim() === "") {
+      alert("Tweet content cannot be empty!");
+      return false;
+    }
+    if (tweetText.length > maxTweetLength) {
+      alert(`Tweet content exceeds ${maxTweetLength} characters!`);
+      return false;
+    }
+    return true;
+  };
+
+  
   // add an event listener to the form submission and prevent reloading the page
   $('.tweet-form').on('submit', function(event) {
     // Prevent the default behavior
@@ -17,13 +33,7 @@ $(document).ready(function() {
     const tweetText = $('#tweet-text').val().trim(); 
 
     // Validation checks
-    if (!tweetText) {
-      alert('Error: Tweet content cannot be empty.');
-      return; // Stop the form submission
-    }
-
-    if (tweetText.length > 140) {
-      alert('Error: Tweet content exceeds the maximum length of 140 characters.');
+    if (!isTweetValid(tweetText)) {
       return; // Stop the form submission
     }
 
