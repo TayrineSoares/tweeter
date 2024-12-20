@@ -42,8 +42,13 @@ $(document).ready(function() {
       type: 'POST',
       url: 'http://localhost:8080/tweets',
       data: serializedData,
-      success: function(response) {
+      success: function (response) {
+        
         console.log('Tweet submitted successfully:', response);
+        
+        // After the tweet is successfully submitted, append it to the page
+        const newTweet = createTweetElement(response);  // Assuming 'response' contains the new tweet data
+        $('#tweets-container').prepend(newTweet);  // Add the new tweet to the top of the list
       }
     });
   });
