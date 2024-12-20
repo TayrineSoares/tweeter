@@ -13,6 +13,19 @@ $(document).ready(function() {
 
     // Serialize the form data
     const serializedData = $(this).serialize();
+    // Get the input value and trim whitespace 
+    const tweetText = $('#tweet-text').val().trim(); 
+
+    // Validation checks
+    if (!tweetText) {
+      alert('Error: Tweet content cannot be empty.');
+      return; // Stop the form submission
+    }
+
+    if (tweetText.length > 140) {
+      alert('Error: Tweet content exceeds the maximum length of 140 characters.');
+      return; // Stop the form submission
+    }
 
     // Send the serialized data to the server
     $.ajax({
