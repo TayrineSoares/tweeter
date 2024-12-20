@@ -28,7 +28,8 @@ $(document).ready(function() {
 
 function createTweetElement(tweetData) {
 
-  const timestamp = tweetData.created_at;
+  // Use timeago.format to calculate the time passed
+  const timestamp = timeago.format(tweetData.created_at);
 
   // Create the HTML structure for the tweet using template literals
   const $tweet = $(`
