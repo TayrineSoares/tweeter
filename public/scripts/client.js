@@ -22,6 +22,13 @@ $(document).ready(function() {
   };
 
   
+
+
+
+
+
+
+  
   // add an event listener to the form submission and prevent reloading the page
   $('.tweet-form').on('submit', function(event) {
     // Prevent the default behavior
@@ -49,12 +56,21 @@ $(document).ready(function() {
          $('#tweets-container').empty();
         // Fetch the tweets again
         loadTweets();
+        // clear the form after submission for better user xp
+        $('.tweet-form')[0].reset();
       }
     });
   });
 
+  // Prevent XSS (Cross-Site Scripting) by Escaping User Input
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
-function createTweetElement(tweetData) {
+
+  function createTweetElement(tweetData) {
 
   // Use timeago.format to calculate the time passed
   const timestamp = timeago.format(tweetData.created_at);
@@ -64,14 +80,14 @@ function createTweetElement(tweetData) {
     <article class="tweet">
       <header>
         <div class="user-info">
-          <img src="${tweetData.user.avatars}" class="tweet-user-picture" alt="${tweetData.user.name}'s avatar">
-          <p>${tweetData.user.name}</p>
+          <img src="${tweetData.user.avatars}" class="tweet-user-picture" alt="${escape(tweetData.user.name)}'s avatar">
+          <p>${escape(tweetData.user.name)}</p>
         </div>
-        <p class="handle">${tweetData.user.handle}</p>
+        <p class="handle">${escape(tweetData.user.handle)}</p>
       </header>
 
       <div class="tweet-body">
-        <p>${tweetData.content.text}</p>
+        <p>${escape(tweetData.content.text)}</p>
       </div>
 
       <footer>
