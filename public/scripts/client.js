@@ -7,28 +7,36 @@
 $(document).ready(function() {
   
   const maxTweetLength = 140;
+  
+  // Error functions 
+  const showError = function (message) {
+    const $error = $('#error-message');
+    // Display error with animation; Uses .html so it accepts html content (to include icons later in the error message)
+    $error.html(message).slideDown(); 
+  };
+  
+  const hideError = function () {
+    const $error = $('#error-message');
+    $error.hide(); // Hide error and clear the text
+  };
 
-  // Validation function
+
+  // Validation function displaying errors 
   const isTweetValid = function (tweetText) {
+    hideError(); // Hide any existing error message before validation
+
     if (!tweetText || tweetText.trim() === "") {
-      alert("Tweet content cannot be empty!");
+      showError(`<i class="fa-solid fa-triangle-exclamation"></i> Tweet content cannot be empty!<i class="fa-solid fa-triangle-exclamation"></i>`);
       return false;
     }
     if (tweetText.length > maxTweetLength) {
-      alert(`Tweet content exceeds ${maxTweetLength} characters!`);
+      showError(`<i class="fa-solid fa-triangle-exclamation"></i> Too long! Tweet content exceeds ${maxTweetLength} characters! <i class="fa-solid fa-triangle-exclamation"></i>`);
       return false;
     }
     return true;
   };
 
-  
 
-
-
-
-
-
-  
   // add an event listener to the form submission and prevent reloading the page
   $('.tweet-form').on('submit', function(event) {
     // Prevent the default behavior
@@ -38,7 +46,7 @@ $(document).ready(function() {
     const serializedData = $(this).serialize();
     // Get the input value and trim whitespace 
     const tweetText = $('#tweet-text').val().trim(); 
-
+    
     // Validation checks
     if (!isTweetValid(tweetText)) {
       return; // Stop the form submission
@@ -58,6 +66,8 @@ $(document).ready(function() {
         loadTweets();
         // clear the form after submission for better user xp
         $('.tweet-form')[0].reset();
+        // Hide any error message (if any)
+        hideError();
       }
     });
   });

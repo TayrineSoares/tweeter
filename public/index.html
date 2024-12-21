@@ -60,8 +60,9 @@
 
     <!-- Page-specific (main) content here -->
 
-    <section class="main">
-
+    <section class="new-tweet">
+    <!-- Error message container -->
+    <p id="error-message"></p>
       <form class="tweet-form" action="/tweets" method="POST"> 
         <label for="tweet-text"> What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -70,6 +71,8 @@
           <output name="counter" id="counter" for="tweet-text">140</output>
         </div>
       </form>
+
+    </section>
 
       <section id="tweets-container">
         <!-- Dynamically created tweets will be appended here -->
