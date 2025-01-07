@@ -30,7 +30,7 @@ This project enabled me to:
 
 ## Getting Started
 
-1. [Create](https://github.com/TayrineSoares/tweeter) a new repository using this repository as a template.
+1. Create a new repository using [this repository](https://github.com/TayrineSoares/tweeter) as a template.
 2. Clone your repository onto your local device.
 3. Install dependencies using the `npm install` command.
 4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.

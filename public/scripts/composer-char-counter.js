@@ -12,7 +12,7 @@ $(document).ready(function() {
     // Update the counter text
     counter.text(charCount);
 
-    // Add a class to indicate when the count is negative
+    // Add/remove class based on char count
     if (charCount < 0) {
       counter.addClass("negative");
     } else {

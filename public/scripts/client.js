@@ -62,12 +62,15 @@ $(document).ready(function() {
       success: function (response) {
         
         console.log('Tweet submitted successfully:', response);
+        
         // Clear the tweet container
          $('#tweets-container').empty();
         // Fetch the tweets again
         loadTweets();
         // clear the form after submission for better user xp
         $('.tweet-form')[0].reset();
+        // Reset the character counter to 140
+        $('#counter').text(140);
         // Hide error message (if any)
         hideError();
       }
