@@ -47,6 +47,10 @@ This project enabled me to:
 
 ## Screenshots 
 
+### Desktop Layout
+
 !["Screeshot of Desktop Layout"](https://github.com/TayrineSoares/tweeter/blob/master/docs/Desktop%20layout.jpg?raw=true) 
+
+### Mobile Layout
 
 !["Screeshot of Mobile Layout, displaying error and negative char count"](https://github.com/TayrineSoares/tweeter/blob/master/docs/Mobile%20layout.jpg?raw=true)
