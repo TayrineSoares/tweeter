@@ -44,3 +44,9 @@ This project enabled me to:
 - Chance: Library for generating random data.
 - Md5: Library for generating MD5 hashes.
 - Nodemon: Development tool for auto-restarting the server on code changes.
+
+## Screenshots 
+
+!["Screeshot of Desktop Layout"](https://github.com/TayrineSoares/tweeter/blob/master/docs/Desktop%20layout.jpg?raw=true) 
+
+!["Screeshot of Mobile Layout, displaying error and negative char count"](https://github.com/TayrineSoares/tweeter/blob/master/docs/Mobile%20layout.jpg?raw=true)
