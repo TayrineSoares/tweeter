@@ -28,10 +28,11 @@
 
  .nav-tweet-btn i {
   color: red;
+  cursor: pointer;
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1024px) {
   nav {
     background-color: #4056A1;
     background-image: none;

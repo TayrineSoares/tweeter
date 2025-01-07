@@ -41,12 +41,12 @@
   background-color: #4056A1;
   color: white;
   padding: 10px;
+  cursor: pointer;
 }
 
 #tweet-button:hover {
   background-color: #263a6a; /* Darker shade on hover */
 }
-
 
 #tweet-text {
   resize: none;

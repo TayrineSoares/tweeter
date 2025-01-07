@@ -71,6 +71,7 @@
   display: flex;
   align-items: end;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .tweet-icons i:hover {     /* Change color of each icon on hover */

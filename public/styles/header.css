@@ -19,7 +19,7 @@ header .name {
 
 
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1024px) {
   .main-header {
     width: 40%;
     margin: 3em;
