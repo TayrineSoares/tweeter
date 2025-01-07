@@ -6,11 +6,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(194, 220, 237);
+  background-color: rgb(165, 191, 208);
   background-image: url("../images/arches.png");
 
 }
 
 header .avatar {
   background-position: center;
+  
+}
+
+header .name {
+  font-family: 'Source Sans ', sans-serif;
 }

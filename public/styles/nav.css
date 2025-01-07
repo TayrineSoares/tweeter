@@ -3,24 +3,26 @@
   z-index: 1000; 
   top: 0; /* makes sure the nav bar stays at the very top of the viewport.*/ 
   display: flex;
+  font-family: 'Source Sans 3', sans-serif;
   align-items: center;
   justify-content: space-between;
 
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: rgb(165, 191, 208);
+  background-image: url("../images/arches.png");
   padding: 0 1.5em;
 
  }
 
- nav span {
+ .nav-tweeter-brand {
   font-family: 'Bungee';
+  
 }
 
  .nav-tweeter-brand {
   color: #FFFFFF;
  }
-
 
  .nav-tweet-btn {
   display: flex;
@@ -33,4 +35,14 @@
 
  .nav-tweet-btn i {
   color: red;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+
+
 }

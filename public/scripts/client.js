@@ -23,7 +23,6 @@ $(document).ready(function() {
 
   // Validation function displaying errors 
   const isTweetValid = function (tweetText) {
-    hideError(); // Hide any existing error message before validation
 
     if (!tweetText || tweetText.trim() === "") {
       showError(`<i class="fa-solid fa-triangle-exclamation"></i> Tweet content cannot be empty!<i class="fa-solid fa-triangle-exclamation"></i>`);
@@ -41,6 +40,8 @@ $(document).ready(function() {
   $('.tweet-form').on('submit', function(event) {
     // Prevent the default behavior
     event.preventDefault();
+
+    hideError(); // Hide any existing error message before validation
 
     // Serialize the form data
     const serializedData = $(this).serialize();

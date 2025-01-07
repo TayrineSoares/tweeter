@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 20px; /* Ensures spacing between tweets */
+  gap: 15px; /* Ensures spacing between tweets */
   
 }
 
@@ -14,7 +14,7 @@
   width: 90%;
   height: auto;
   padding: 20px;
-  margin: 50px;
+  margin: 20px;
 }
 
 /* Hover effect for the tweet container */
