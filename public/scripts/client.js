@@ -36,8 +36,7 @@ $(document).ready(function() {
     return true;
   };
 
-
-  // add an event listener to the form submission and prevent reloading the page
+  // add an event listener to the form submission/ prevent reloading the page
   $('.tweet-form').on('submit', function(event) {
     // Prevent the default behavior
     event.preventDefault();
@@ -62,7 +61,7 @@ $(document).ready(function() {
       success: function (response) {
         
         console.log('Tweet submitted successfully:', response);
-        
+
         // Clear the tweet container
          $('#tweets-container').empty();
         // Fetch the tweets again
