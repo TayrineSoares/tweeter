@@ -11,7 +11,7 @@ html {
 }
 
 /*
- * Global layout stuff
+ * Global layout
  */
 
 body {
@@ -26,7 +26,7 @@ body {
 main {
   width: 90%;
   margin: 0 auto; /* centers the element horizontally */
-  background-color: inherit; /* inherits from the parent element (body) */
+  background-color: inherit;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
@@ -44,7 +44,5 @@ main {
     display: flex;
     flex-direction: column;
     width: 90%;
-
   }
-
 }

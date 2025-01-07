@@ -55,7 +55,7 @@
   outline: none;
   border-bottom: 3px solid black;        
   color: #333;                    /* Text color for visibility */
-  font-size: 16px;                 /* Font size */
+  font-size: 16px;
 }
 
 .negative {                      /* counter becomes red when < 0 */

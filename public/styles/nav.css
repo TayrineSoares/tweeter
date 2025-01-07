@@ -6,23 +6,17 @@
   font-family: 'Source Sans 3', sans-serif;
   align-items: center;
   justify-content: space-between;
-
   height: 120px;
   width: 100%;
   background-color: rgb(165, 191, 208);
   background-image: url("../images/arches.png");
   padding: 0 1.5em;
-
  }
 
  .nav-tweeter-brand {
   font-family: 'Bungee';
-  
-}
-
- .nav-tweeter-brand {
   color: #FFFFFF;
- }
+}
 
  .nav-tweet-btn {
   display: flex;
@@ -30,7 +24,6 @@
   align-items: center;
   color: #FFFFFF;
   padding: 0 1.5em;
-
  }
 
  .nav-tweet-btn i {
@@ -43,6 +36,4 @@
     background-color: #4056A1;
     background-image: none;
   }
-
-
 }

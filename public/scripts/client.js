@@ -1,7 +1,6 @@
 /*
- * Client-side JS logic goes here
+ * Client-side JS logic
  * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
 $(document).ready(function() {
@@ -28,10 +27,12 @@ $(document).ready(function() {
       showError(`<i class="fa-solid fa-triangle-exclamation"></i> Tweet content cannot be empty!<i class="fa-solid fa-triangle-exclamation"></i>`);
       return false;
     }
+
     if (tweetText.length > maxTweetLength) {
       showError(`<i class="fa-solid fa-triangle-exclamation"></i> Too long! Tweet content exceeds ${maxTweetLength} characters! <i class="fa-solid fa-triangle-exclamation"></i>`);
       return false;
     }
+
     return true;
   };
 
@@ -50,7 +51,7 @@ $(document).ready(function() {
     
     // Validation checks
     if (!isTweetValid(tweetText)) {
-      return; // Stop the form submission
+      return; // Stops the form submission
     }
 
     // Send the serialized data to the server
@@ -67,7 +68,7 @@ $(document).ready(function() {
         loadTweets();
         // clear the form after submission for better user xp
         $('.tweet-form')[0].reset();
-        // Hide any error message (if any)
+        // Hide error message (if any)
         hideError();
       }
     });
@@ -114,21 +115,21 @@ $(document).ready(function() {
 
   // Return the tweet element
   return $tweet;
-}
-
-
-// takes in an array of tweet objects and then appends each one to the #tweets-container
-const renderTweets = function(tweets) {
-
-  // Loop through each tweet object in the array
-  for (const tweet of tweets) {
-    // Create the tweet element using createTweetElement
-    const $tweetElement = createTweetElement(tweet);
-
-    // Append the tweet element to the #tweets-container
-    $('#tweets-container').prepend($tweetElement);
   }
-};
+
+
+  // takes in an array of tweet objects and then appends each one to the #tweets-container
+  const renderTweets = function(tweets) {
+
+    // Loop through each tweet object in the array
+    for (const tweet of tweets) {
+      // Create the tweet element using createTweetElement
+      const $tweetElement = createTweetElement(tweet);
+
+      // Append the tweet element to the #tweets-container
+      $('#tweets-container').prepend($tweetElement);
+    }
+  };
 
 
   // Function to fetch tweets from the server
