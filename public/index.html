@@ -46,6 +46,7 @@
       </div>
     </nav>
 
+    
     <!-- Header -->
     <header class="main-header">
       <div class="avatar">
@@ -60,29 +61,27 @@
 
     <!-- Page-specific (main) content here -->
 
-    <section class="new-tweet">
-    <!-- Error message container -->
-    <p id="error-message"></p>
-      <form class="tweet-form" action="/tweets" method="POST"> 
-        <label for="tweet-text"> What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class="counter-line">
-          <button type="submit" id="tweet-button">Tweet</button>
-          <output name="counter" id="counter" for="tweet-text">140</output>
-        </div>
-      </form>
+    <section class="page-container">
 
-    </section>
+      <section class="new-tweet">
+      <!-- Error message container -->
+      <p id="error-message"></p>
+        <form class="tweet-form" action="/tweets" method="POST"> 
+          <label for="tweet-text"> What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="counter-line">
+            <button type="submit" id="tweet-button">Tweet</button>
+            <output name="counter" id="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+
+      </section>
 
       <section id="tweets-container">
         <!-- Dynamically created tweets will be appended here -->
       </section>
 
-    <!-- <main class="container">
-      <h2>Test</h2>
-      <p>Lorem </p>
-
-    </main> -->
+    </section>
 
   <script type="text/javascript" src="/scripts/composer-char-counter.js" ></script>
   </body>

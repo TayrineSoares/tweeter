@@ -36,5 +36,15 @@ main {
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-  
+  body {
+    display: flex;
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+  }
+
 }

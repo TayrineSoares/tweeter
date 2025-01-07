@@ -13,9 +13,27 @@
 
 header .avatar {
   background-position: center;
-  
 }
 
 header .name {
   font-family: 'Source Sans ', sans-serif;
+}
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .main-header {
+    width: 40%;
+    margin: 3em;
+    min-width: 350px;
+  }
+
+  header .avatar {
+    margin-top: 2em;
+  }
+
+  header .name {
+    margin-bottom: 20px;
+  }
+
 }
